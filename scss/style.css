@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 5vmin;
+}
+
+main {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 5vmin 0;
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  background-color: black;
+}
+
+menu {
+  margin: auto;
+  width: 90vmin;
+  border-radius: 20px 20px 0 0;
+  background: url("../images/background.jpg") no-repeat;
+  /* fallback */
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 0, 0)), to(black)), url("../images/background.jpg");
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), black), url("../images/background.jpg");
+  background-size: cover;
+}
+
+#banner {
+  color: white;
+  margin: auto;
+  width: 90vmin;
+  height: 10.8vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#banner #title {
+  width: 76%;
+  margin-left: 12%;
+  text-align: center;
+}
+
+#banner figure {
+  height: 7.2vmin;
+  margin: 1.8vmin;
+}
+
+#banner figure img {
+  height: 100%;
+}
+
+form {
+  height: 10.8vmin;
+  width: 90vmin;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+form button {
+  border-bottom-left-radius: 20px;
+  background-color: transparent;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: flex-end;
+  height: 7.2vmin;
+  margin: 1.8vmin;
+}
+
+form button img {
+  height: 100%;
+}
+
+form #task {
+  width: 76%;
+  font-size: 1rem;
+  height: 7.2vmin;
+}
+
+#list {
+  margin: auto;
+  width: 90vmin;
+}
+
+#list #task-list {
+  min-height: 58.5vmin;
+  background-color: white;
+}
+
+#list ul {
+  list-style-type: none;
+}
+
+#list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid grey;
+}
+
+#list ul li .done {
+  border-radius: 100%;
+  border: 2px solid #16d047;
+}
+
+#list ul li .done, #list ul li .delete {
+  width: 8%;
+  margin: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#list ul li .done img, #list ul li .delete img {
+  width: 100%;
+}
+
+#list ul li .todo-text {
+  margin: 2%;
+  width: 86%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#bumper {
+  background: url("../images/background.jpg") no-repeat;
+  background-size: cover;
+  margin: auto;
+  width: 90vmin;
+  height: 9vmin;
+  border-radius: 0 0 20px 20px;
+}
+
+.unchecked .done img {
+  opacity: 0;
+}
+
+.unchecked .todo-text {
+  text-decoration: none;
+  color: initial;
+}
+
+.checked .done img {
+  opacity: 1;
+}
+
+.checked .todo-text {
+  text-decoration: line-through;
+  color: grey;
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 3vmin;
+  }
+}
+/*# sourceMappingURL=style.css.map */

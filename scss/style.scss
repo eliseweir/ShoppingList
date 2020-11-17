@@ -1,0 +1,154 @@
+$border: 20px;
+$width: 90vmin;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 5vmin;
+}
+
+main {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 5vmin 0;
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  background-color: black;
+}
+
+menu {
+  margin: auto;
+  width: $width;
+  border-radius: $border $border 0 0;
+  background: url("../images/background.jpg") no-repeat; /* fallback */
+  background-image: linear-gradient(to right,rgba(255,0,0,0), black), url("../images/background.jpg");
+  background-size: cover;
+}
+
+#banner {
+  color: white;
+  margin: auto;
+  width: $width;
+  height: 0.12*$width;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  #title {
+    width: 76%;
+    margin-left: 12%;
+    text-align: center;
+  }
+  figure {
+    height: 0.08*$width;
+    margin: 0.02*$width;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+form {
+  height: 0.12*$width;
+  width: $width;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  button {
+    border-bottom-left-radius: $border;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    border: none;
+    align-items: center;
+    justify-self: flex-end;
+    height: 0.08*$width;
+    margin: 0.02*$width;
+    img {
+      height: 100%;
+    }
+  }
+  #task {
+    width: 76%;
+    font-size: 1rem;
+    height: 0.08*$width;
+  }
+}
+  
+
+#list {
+  margin: auto;
+  width: $width;
+  #task-list {
+    min-height: 0.65*$width;
+    background-color: white;
+  }
+  ul {
+    list-style-type:none;
+    li {
+      display: flex;
+      align-items: center;
+      border-top: 1px solid grey;
+      .done {
+        border-radius: 100%;
+        border: 2px solid #16d047;
+      }
+      .done, .delete {
+        width: 8%;
+        margin: 2%;
+        display: flex;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+      .todo-text {
+        margin: 2%;
+        width: 86%;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+#bumper {
+  background: url("../images/background.jpg") no-repeat;
+  background-size: cover;
+  margin: auto;
+  width: $width;
+  height: 0.10*$width;
+  border-radius: 0 0 $border $border;
+}
+
+.unchecked {
+  .done img {
+    opacity: 0;
+  }
+  .todo-text {
+    text-decoration: none;
+    color: initial;
+  }
+}
+
+.checked {
+  .done img {
+    opacity: 1;
+  }
+  .todo-text {
+    text-decoration: line-through;
+    color: grey;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 3vmin;
+  }
+}
