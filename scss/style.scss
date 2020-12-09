@@ -7,20 +7,20 @@ $border: 20px;
 }
 
 html {
-  font-size: 5vmin;
+
 }
 
 main {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   min-height: 100vh;
-  height: auto;
   width: 100vw;
   background-color: black;
 }
 
 menu {
   margin: auto;
-  width: unquote("min(100vw, 56.25vmax)");
+  width: 100%;
+  max-width: 768px;
   border-radius: $border $border 0 0;
   background: url("../images/background.jpg") no-repeat; /* fallback */
   background-image: linear-gradient(to right,rgba(255,0,0,0), black), url("../images/background.jpg");
@@ -30,28 +30,27 @@ menu {
 #banner {
   color: white;
   margin: auto;
-  width: unquote("min(100vw, 56.25vmax)");
-  height: unquote("min(12vw, 0.12*56.25vmax)");
+  width: 100%;
+  max-width: 768px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   #title {
     width: 76%;
-    margin-left: 12%;
+    margin-left: 14%;
     text-align: center;
   }
   figure {
-    height: unquote("min(8vw, 0.08*56.25vmax)");
-    margin: unquote("min(2vw, 0.02*56.25vmax)");
+    width: 6%;
+    margin: 2%;
     img {
-      height: 100%;
+      width: 100%;
     }
   }
 }
 
 form {
-  height: unquote("min(12vw, 0.12*56.25vmax)");
-  width: unquote("min(100vw, 56.25vmax)");
+  width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: flex-end;
@@ -63,25 +62,25 @@ form {
     border: none;
     align-items: center;
     justify-self: flex-end;
-    height: unquote("min(8vw, 0.08*56.25vmax)");
-    margin: unquote("min(2vw, 0.02*56.25vmax)");
+    width: 6%;
+    margin: 2%;
     img {
-      height: 100%;
+      width: 100%;
     }
   }
   #task {
     width: 76%;
     font-size: 1rem;
-    height: unquote("min(8vw, 0.08*56.25vmax)");
   }
 }
   
 
 #list {
   margin: auto;
-  width: unquote("min(100vw, 56.25vmax)");
+  width: 100%;
+  max-width: 768px;
   #task-list {
-    min-height: unquote("min(100vw, 56.25vmax)");
+    min-height: 10rem;
     background-color: white;
   }
   ul {
@@ -95,7 +94,7 @@ form {
         border: 2px solid #16d047;
       }
       .done, .delete {
-        width: 8%;
+        width: 6%;
         margin: 2%;
         display: flex;
         align-items: center;
@@ -105,7 +104,7 @@ form {
       }
       .todo-text {
         margin: 2%;
-        width: 86%;
+        width: 90%;
         display: flex;
         align-items: center;
         white-space: nowrap;
@@ -120,8 +119,9 @@ form {
   background: url("../images/background.jpg") no-repeat;
   background-size: cover;
   margin: auto;
-  width: unquote("min(100vw, 56.25vmax)");
-  height: unquote("min(10vw, 5.625vmax)");
+  width: 100%;
+  max-width: 768px;
+  height: 3rem;
   border-radius: 0 0 $border $border;
 }
 
@@ -145,8 +145,9 @@ form {
   }
 }
 
-@media only screen and (min-width: 768px) {
+/* large phones, tablets, and computers */
+@media only screen and (min-width: 600px) {
   html {
-    font-size: 3vmin;
+    font-size: 25px;
   }
 }

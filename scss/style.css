@@ -5,21 +5,17 @@
           box-sizing: border-box;
 }
 
-html {
-  font-size: 5vmin;
-}
-
 main {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   min-height: 100vh;
-  height: auto;
   width: 100vw;
   background-color: black;
 }
 
 menu {
   margin: auto;
-  width: min(100vw, 56.25vmax);
+  width: 100%;
+  max-width: 768px;
   border-radius: 20px 20px 0 0;
   background: url("../images/background.jpg") no-repeat;
   /* fallback */
@@ -31,8 +27,8 @@ menu {
 #banner {
   color: white;
   margin: auto;
-  width: min(100vw, 56.25vmax);
-  height: min(12vw, 0.12*56.25vmax);
+  width: 100%;
+  max-width: 768px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,22 +42,21 @@ menu {
 
 #banner #title {
   width: 76%;
-  margin-left: 12%;
+  margin-left: 14%;
   text-align: center;
 }
 
 #banner figure {
-  height: min(8vw, 0.08*56.25vmax);
-  margin: min(2vw, 0.02*56.25vmax);
+  width: 6%;
+  margin: 2%;
 }
 
 #banner figure img {
-  height: 100%;
+  width: 100%;
 }
 
 form {
-  height: min(12vw, 0.12*56.25vmax);
-  width: min(100vw, 56.25vmax);
+  width: 100%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -87,27 +82,27 @@ form button {
       -ms-flex-align: center;
           align-items: center;
   justify-self: flex-end;
-  height: min(8vw, 0.08*56.25vmax);
-  margin: min(2vw, 0.02*56.25vmax);
+  width: 6%;
+  margin: 2%;
 }
 
 form button img {
-  height: 100%;
+  width: 100%;
 }
 
 form #task {
   width: 76%;
   font-size: 1rem;
-  height: min(8vw, 0.08*56.25vmax);
 }
 
 #list {
   margin: auto;
-  width: min(100vw, 56.25vmax);
+  width: 100%;
+  max-width: 768px;
 }
 
 #list #task-list {
-  min-height: min(100vw, 56.25vmax);
+  min-height: 10rem;
   background-color: white;
 }
 
@@ -131,7 +126,7 @@ form #task {
 }
 
 #list ul li .done, #list ul li .delete {
-  width: 8%;
+  width: 6%;
   margin: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,7 +142,7 @@ form #task {
 
 #list ul li .todo-text {
   margin: 2%;
-  width: 86%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,8 +158,9 @@ form #task {
   background: url("../images/background.jpg") no-repeat;
   background-size: cover;
   margin: auto;
-  width: min(100vw, 56.25vmax);
-  height: min(10vw, 5.625vmax);
+  width: 100%;
+  max-width: 768px;
+  height: 3rem;
   border-radius: 0 0 20px 20px;
 }
 
@@ -186,9 +182,10 @@ form #task {
   color: grey;
 }
 
-@media only screen and (min-width: 768px) {
+/* large phones, tablets, and computers */
+@media only screen and (min-width: 600px) {
   html {
-    font-size: 3vmin;
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
